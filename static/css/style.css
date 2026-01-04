@@ -84,3 +84,148 @@ nav a {
     padding: 12px;
     margin-bottom: 20px;
 }
+
+/* Layout */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #0b0f1a, #1a1f2e);
+    color: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-header {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #2a2f45;
+}
+
+.sidebar-header .brand {
+    color: #5da9ff;
+}
+
+/* Menu */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    border-bottom: 1px solid #22273a;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #cfd3ec;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-menu a:hover {
+    background: #11162a;
+    color: #ffffff;
+}
+
+.sidebar-menu li.active a {
+    background: #11162a;
+    color: #ffffff;
+}
+
+/* Icons */
+.icon {
+    width: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Arrow */
+.arrow {
+    margin-left: auto;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    padding: 40px;
+    background: #f5f7fa;
+}
+
+/* Hero Banner */
+.hero-banner {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Slides */
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+/* Dark overlay */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(5, 10, 25, 0.75),
+        rgba(5, 10, 25, 0.85)
+    );
+    z-index: 1;
+}
+
+/* Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #d0d6f0;
+}
+
+/* Button reuse */
+.hero-content .btn-primary {
+    width: fit-content;
+}
